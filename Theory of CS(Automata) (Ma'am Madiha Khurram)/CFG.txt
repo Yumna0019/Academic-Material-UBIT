@@ -1,0 +1,66 @@
+cfg:
+
+<loop> ::= iter( <initialize_statement> ;<condition>;<counter> ) { <body> }
+
+<initialize_statement> ::=DT ID = <expression>
+
+<condition> ::= digit <cond_operator> ID | ID <cond_operator> digit |ID <cond_operator> ID
+
+<counter> ::= ID=ID+1 | ID=ID-1
+
+<cond_operator> == | '<' | '<=' | '>' | '>=' | not | and | or
+
+<conditional_statement> ::= if ( <condition> ) { <body>}| elif ( <condition> ) { <body>}
+| else { <body>}
+
+<body> ::= <statement> | <body> <statement>
+<statement> ::= <initialize_statement> <statement> | <counter> <statement>| <loop> <statement> | <conditional_statement> <statement> | <print_statement> <statement>| <input_statement> <statement> | null 
+
+<input_statement> ::= input (ID)
+
+<print_statement> ::= print(ID) | print(digit)
+
+<expression> :: ID <new> | digit<new>
+<new> =<arithmetic_operator> ID <new> | <arithmetic_operator> digit <new> | null 
+
+<arithmetic_operator> ::= '+' | '-' |'*' | '/' 
+
+# Define an iterative loop with initialization, condition, and counter
+iter(num #i = 0; #i < 5; #i = #i + 1) {
+    # Inside the loop body
+    # Initialize a variable j
+    DT #j = #i * 2
+    # Check a condition
+    if (#j >= 5) {
+        print(#j)
+    }
+}
+
+<loop> ::= iter( <initialize_statement> ; <condition>; <counter> ) { <body> }
+<initialize_statement> ::=iter( num #i = <expression> ; <condition>; <counter> ) { <body> }
+<expression> :: iter( num #i = 0 <new> ; <condition>; <counter> ) { <body> }
+<new> :: = iter( num #i = 0; <condition>; <counter> ) { <body> }
+<condition> ::= iter( num #i = 0; #i <cond_operator> digit ; <counter> ) { <body> }
+<cond_operator> ::= iter( num #i = 0; #i < digit ; <counter> ) { <body> }
+<condition> ::= iter( num #i = 0; #i < 5; <counter> ) { <body> }
+<counter> ::=  iter( num #i = 0; #i < 5; #i = #i + 1){<body> }
+<body> ::= iter( num #i = 0; #i < 5; #i = #i + 1){<statement> }
+<statement> ::= iter( num #i = 0; #i < 5; #i = #i + 1){ <initialize_statement> <statement> }
+<initialize_statement> ::=  iter( num #i = 0; #i < 5; #i = #i + 1){ num #j = <expression> <statement> }
+<expression> :: iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i <new> <statement> }
+<new> =iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i <arithmetic_operator> digit <new> <statement> } 
+<arithmetic_operator> ::= iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i * 2  <statement> }
+<statement>::= iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i * 2  <conditional_statement> <statement> }
+<conditional_statement> ::= iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i * 2  if ( <condition> ) { <body>} <statement> }
+<condition> ::= iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i * 2  if (  #j <cond_operator> digit ) { <body>} <statement> }
+<cond_operator> == iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i * 2  if (  #j >= 5 ) { <body> } <statement> }
+
+<body> ::= <cond_operator> == iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i * 2  if (  #j >= 5 ) { <statement> } <statement> }
+
+<statement> ::= iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i * 2  if (  #j >= 5 ) { <print_statement> <statement> } <statement> }
+
+
+<print_statement> ::= iter( num #i = 0; #i < 5; #i = #i + 1){ num #j =  #i * 2  if (  #j >= 5 ) { print(#j) } }
+
+input(#d)
+<input_statement> ::= input (#d)
