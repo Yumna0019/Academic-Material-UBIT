@@ -1,0 +1,307 @@
+[
+    {
+        "type": "function_definition",
+        "name": "myFunction",
+        "data_type": "void",
+        "parameters": [],
+        "body": {
+            "type": "block",
+            "statements": [
+                {
+                    "type": "variable_initialization",
+                    "data_type": "double",
+                    "identifier": "i",
+                    "value": {
+                        "type": "number",
+                        "value": "1"
+                    }
+                },
+                {
+                    "type": "loop",
+                    "condition": {
+                        "type": "ROP",
+                        "left": {
+                            "type": "identifier",
+                            "name": "i"
+                        },
+                        "operator": "<",
+                        "right": {
+                            "type": "number",
+                            "value": "5"
+                        }
+                    },
+                    "block": {
+                        "type": "block",
+                        "statements": [
+                            {
+                                "type": "conditional",
+                                "condition": {
+                                    "type": "ROP",
+                                    "left": {
+                                        "type": "identifier",
+                                        "name": "i"
+                                    },
+                                    "operator": "==",
+                                    "right": {
+                                        "type": "number",
+                                        "value": "3"
+                                    }
+                                },
+                                "true_block": {
+                                    "type": "block",
+                                    "statements": [
+                                        {
+                                            "type": "Break"
+                                        }
+                                    ]
+                                },
+                                "false_block": {
+                                    "type": "block",
+                                    "statements": [
+                                        {
+                                            "type": "PM",
+                                            "left": {
+                                                "type": "=",
+                                                "left": {
+                                                    "type": "identifier",
+                                                    "name": "i"
+                                                },
+                                                "operator": "=",
+                                                "right": {
+                                                    "type": "identifier",
+                                                    "name": "i"
+                                                }
+                                            },
+                                            "operator": "+",
+                                            "right": {
+                                                "type": "number",
+                                                "value": "2"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "PM",
+                                "left": {
+                                    "type": "=",
+                                    "left": {
+                                        "type": "identifier",
+                                        "name": "i"
+                                    },
+                                    "operator": "=",
+                                    "right": {
+                                        "type": "identifier",
+                                        "name": "i"
+                                    }
+                                },
+                                "operator": "+",
+                                "right": {
+                                    "type": "number",
+                                    "value": "1"
+                                }
+                            },
+                            {
+                                "type": "print",
+                                "variable": {
+                                    "type": "variable",
+                                    "name": "i"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "type": "var_declaration",
+        "data_type": "str",
+        "name": "name"
+    },
+    {
+        "type": "var_declaration",
+        "data_type": "double",
+        "name": "age"
+    },
+    {
+        "type": "variable_initialization",
+        "data_type": "double",
+        "identifier": "score",
+        "value": {
+            "type": "number",
+            "value": "10.0"
+        }
+    },
+    {
+        "type": "variable_initialization",
+        "data_type": "str",
+        "identifier": "greeting",
+        "value": {
+            "type": "string",
+            "value": "\"Hello world!\""
+        }
+    },
+    {
+        "type": "function_definition",
+        "name": "getInput",
+        "data_type": "void",
+        "parameters": [],
+        "body": {
+            "type": "block",
+            "statements": [
+                {
+                    "type": "input",
+                    "variable": {
+                        "type": "string",
+                        "value": "\"Enter your name: \""
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "type": "function_definition",
+        "name": "calculate",
+        "data_type": "double",
+        "parameters": [
+            {
+                "type": "DT",
+                "name": "a"
+            },
+            {
+                "type": "DT",
+                "name": "b"
+            }
+        ],
+        "body": {
+            "type": "block",
+            "statements": [
+                {
+                    "type": "variable_initialization",
+                    "data_type": "double",
+                    "identifier": "c",
+                    "value": {
+                        "type": "PM",
+                        "left": {
+                            "type": "identifier",
+                            "name": "a"
+                        },
+                        "operator": "+",
+                        "right": {
+                            "type": "identifier",
+                            "name": "b"
+                        }
+                    }
+                },
+                {
+                    "type": "retrun",
+                    "variable": {
+                        "type": "variable",
+                        "name": "c"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "type": "array_initialization",
+        "data_type": "double",
+        "name": "scores",
+        "elements": [
+            1.0,
+            2.0,
+            3.0
+        ]
+    },
+    {
+        "type": "array_initialization",
+        "data_type": "str",
+        "name": "names",
+        "elements": [
+            "\"Alice\"",
+            "\"Bob\""
+        ]
+    },
+    {
+        "pub/pri": "Access Modifier",
+        "type": "class",
+        "name": "Animal",
+        "block": {
+            "type": "block",
+            "statements": [
+                {
+                    "type": "function_definition",
+                    "name": "makeSound",
+                    "data_type": "void",
+                    "parameters": [],
+                    "body": {
+                        "type": "block",
+                        "statements": [
+                            {
+                                "type": "print",
+                                "variable": {
+                                    "type": "string",
+                                    "value": "\"Animal sound\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "pub/pri": "Access Modifier",
+        "type": "inheritance",
+        "name": "Dog",
+        "parent": "Animal",
+        "block": {
+            "type": "block",
+            "statements": [
+                {
+                    "type": "function_definition",
+                    "name": "bark",
+                    "data_type": "void",
+                    "parameters": [],
+                    "body": {
+                        "type": "block",
+                        "statements": [
+                            {
+                                "type": "print",
+                                "variable": {
+                                    "type": "string",
+                                    "value": "\"Dog barks!\""
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "type": "object_creation",
+        "class_type": "Dog",
+        "object_name": "dog",
+        "parameters": []
+    },
+    {
+        "type": "method_call",
+        "object_name": "bark",
+        "parameters": []
+    },
+    {
+        "type": "function_calling",
+        "name": "getInput",
+        "arguments": []
+    },
+    {
+        "type": "function_calling",
+        "name": "calculate",
+        "arguments": [
+            "55",
+            "45"
+        ]
+    }
+]

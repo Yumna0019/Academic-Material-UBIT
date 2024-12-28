@@ -1,0 +1,62 @@
+$$ This is a 
+multi line comment $$
+
+$ loop and conditionals(if-else) 
+void myFunction() {
+    double i = 1;
+    loop(i < 5) {
+        if (i == 3) {
+            br
+        };
+        else{
+            i = i + 2
+        };
+        i = i + 1
+        prnt(i);
+    };
+};
+
+$ variable initialize
+str name;
+double age;
+double score = 10.0;
+str greeting = "Hello world!";
+
+$ input
+void getInput() {
+    inp("Enter your name: ");
+};
+
+$ function initialization
+double calculate(double a, double b) {
+    double c = a + b;
+    retn (c);
+};
+
+$ array
+double[] scores = {1,2,3};
+str[] names = {"Alice" , "Bob"};
+
+$ inheritence
+pub class Animal {
+    void makeSound() {
+        prnt("Animal sound");
+    };
+};
+
+pub class Dog extends Animal {
+    void bark() {
+        prnt("Dog barks!");
+    };
+};
+
+
+$ object 
+Dog dog = new Dog();
+
+$ object calling
+dog.bark();
+
+$ function calling
+getInput();
+calculate(55, 45);
