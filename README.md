@@ -1,5 +1,5 @@
 ## 6th Semester :
-### Modelling & Simulation (Ma'am Shaista Raees):
+### => Modelling & Simulation (Ma'am Shaista Raees):
  Project ( Simulation & Queuing ) : [Code](https://github.com/Yumna0019/Simulation-Project)  | [Live](https://queue-simulator-y.netlify.app/).
  
  Pycode: [Repo](https://github.com/Yumna0019/simulator).
@@ -7,7 +7,7 @@
 ---
 
 ## 7th Semester :
-### Internet Application Development ( Ma'am Humaira Tariq ):
+### => Internet Application Development ( Ma'am Humaira Tariq ):
 #Assignments:
 | **S.No**    | **Project**                              | **Code**    | **Live**  |
 |----------------|----------------------------------------------|-----------|-----------|
@@ -20,7 +20,7 @@
 
 ---
 
-### Network Security & Cryptogarphy (Sir Sadiq Ali Khan):
+### => Network Security & Cryptogarphy (Sir Sadiq Ali Khan):
 #Assignments:
 | **S.No**    | **Project**                              | **Code**    | **Live**  |
 |----------------|----------------------------------------------|-----------|-----------|
