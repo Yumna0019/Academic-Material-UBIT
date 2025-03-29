@@ -14,8 +14,9 @@
 | 1.  | Text Reverser Using Plain JavaScript (Vanilla JS) | [Repo](https://github.com/Yumna0019/TextReverser-Plain-JavaScript-Vanilla-JS-) | [Live](https://tr-js.netlify.app/) |
 | 2.  | Text Reverser Using Modern React | [Repo](https://github.com/Yumna0019/TextReverser-Modern-React) | [Live](https://tr-modern-react.netlify.app/) |  
 | 3.  | Text Reverser Using Native React | [Repo](https://github.com/Yumna0019/TextReverser-Native_React) | [Live](https://tr-native-react.netlify.app/) |  
-| 4.  | Text Reverser Using Redux React | [Repo](https://github.com/Yumna0019/TextReverser-Redux-React) | [Live](https://tr-redux-react.netlify.app/) | 
-| 5.  | Project Management App | [Repo](https://github.com/Yumna0019/Project-Management) | [Live](https://iadprojectmanagement.vercel.app/) |
+| 4.  | Text Reverser Using Redux React | [Repo](https://github.com/Yumna0019/TextReverser-Redux-React) | [Live](https://tr-redux-react.netlify.app/) |
+| 5.  | Project Management App | [Repo]([https://github.com/Yumna0019/Project-Management](https://github.com/Yumna0019/Counter-App-Using-Arrow-Func)) | [Live](https://counter-arr-func.netlify.app/) |
+| 6.  | Project Management App | [Repo](https://github.com/Yumna0019/Project-Management) | [Live](https://iadprojectmanagement.vercel.app/) |
 
 
 ---
